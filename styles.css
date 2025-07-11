@@ -7,8 +7,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f0f0f0;
+  text-align: center;
 }
 
 /* Heading */
@@ -21,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* Box styling (shared) */
@@ -28,7 +30,6 @@ body {
   background-color: #ffffff;
   padding: 20px;
   width: 150px;
-  text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 8px;
 }
@@ -45,4 +46,18 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container > div {
+    width: 80%;
+    max-width: 300px;
+  }
 }
