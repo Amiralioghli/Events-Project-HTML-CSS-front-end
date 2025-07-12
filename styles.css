@@ -7,14 +7,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  text-align: center;
+  height: 100vh;
+  background: url('https://i.gifer.com/7plQ.gif') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: dark translucent overlay for contrast */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  /* Adjust opacity if needed */
+  z-index: 0;
+}
+
+/* All main content stays above overlay */
+#main-heading,
+.container {
+  z-index: 1;
+  position: relative;
 }
 
 /* Heading */
 #main-heading {
   margin-bottom: 40px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
 /* Container for the boxes */
@@ -27,11 +47,17 @@ body {
 
 /* Box styling (shared) */
 .container > div {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  width: 150px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 190px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.container > div:hover {
+  transform: scale(1.05);
 }
 
 /* Button styling */
@@ -48,16 +74,11 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* ===== Mobile Styles ===== */
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .container > div {
-    width: 80%;
-    max-width: 300px;
-  }
+.book-details {
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
+  font-style: italic;
+  z-index: 1;
+  position: relative;
 }
