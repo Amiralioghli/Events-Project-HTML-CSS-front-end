@@ -1,3 +1,4 @@
+const box_1 = document.querySelector('.box-1');
 const box_2 = document.querySelector('.box-2');
 const box_3 = document.querySelector('.box-3');
 
@@ -5,21 +6,37 @@ const color_1 = document.querySelector('.color-1');
 const color_2 = document.querySelector('.color-2');
 const color_3 = document.querySelector('.color-3');
 
-function alrettoClick()
+
+
+const book_notification = document.querySelector('.book-details');
+
+
+function alrettoClick1()
 {
-    alert('I love javascript!');
+    book_notification.textContent = "Your Hotel reservation is inactive now to activate it, please sign up first!";
 }
 
 
-box_2.addEventListener('click', alrettoClick);
+box_1.addEventListener('click', alrettoClick1);
 
-function alretover()
+
+function alrettoClick2()
 {
-    alert('I love javascript!');
+    book_notification.textContent = "Your Conference is inactive now to activate it, please sign up first!";
 }
 
 
-box_3.addEventListener('click', alretover);
+box_2.addEventListener('click', alrettoClick2);
+
+
+function alrettoClick3()
+{
+    book_notification.textContent = "Your International Sport is inactive now to activate it, please sign up first!";
+}
+
+
+box_3.addEventListener('click', alrettoClick3);
+
 
 
 function changeColor_1()
