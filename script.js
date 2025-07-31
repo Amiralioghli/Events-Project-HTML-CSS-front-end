@@ -10,6 +10,7 @@ const color_3 = document.querySelector('.color-3');
 
 const book_notification = document.querySelector('.book-details');
 
+/* The function of the existing stadium counter */
 
 function alrettoClick1()
 {
